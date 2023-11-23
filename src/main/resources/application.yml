@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: yupao_match
+  session:
+    timeout: 86400
+    store-tpye: redis
+
+  # DataSource Config
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/yupao_match
+    username: root
+    password: b930327366
+
+  data:
+    redis:
+      port: 6379
+      database: 1
+      host: localhost
+
+
+#server:
+#  port: 8080
+#  servlet:
+#    session:
+#      cookie:
+#        domain: localhost
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+
+
+
+# springdoc-openapi项目配置
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan: com.lead.controllers
