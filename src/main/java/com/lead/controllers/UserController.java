@@ -38,7 +38,7 @@ import static com.lead.constant.Constant.USER_LOGIN_STATE;
 public class UserController {
 
     @Resource
-    UserService userService;
+    private UserService userService;
 
     /**
      * 用户注册
